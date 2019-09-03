@@ -25,11 +25,8 @@
     </table>
 </p>
 <p>
-    The data is accessible from the derived BaseData instances (SECReport8K, SECReport10K, etc.) under the field <code>Report</code>. The <code>Report</code> field is of type $[SECReport,T:QuantConnect.Common.Data.Custom.SEC.SECReport]
+    The data is accessible from the <code>SECReport8K</code>, <code>SECReport10K</code>, etc. types under the <code>Report</code> field. The <code>Report</code> field is of type $[SECReport,T:QuantConnect.Common.Data.Custom.SEC.SECReport]
     and contains all of the report metadata in a structured format. However, the report document contents are left raw and unparsed.
-</p>
-<p>
-    Note: Since we use the same interface in our BaseData derived classes (<code>ISECReport</code>), we can use <code>SECReport8K</code> as an example to cover for both <code>SECReport10K</code> and <code>SECReport10Q</code>.
 </p>
 <p>
     Inside $[SECReport8K,T:QuantConnect.Common.Data.Custom.SEC.SECReport8K], the <code>Report</code> field contains the contents of the SEC report as a $[SECReportSubmission,T:QuantConnect.Common.Data.Custom.SEC.SECReportSubmission] object, which will let us
